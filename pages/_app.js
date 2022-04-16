@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -19,14 +19,22 @@ a {
 * {
   box-sizing: border-box;
 }
+`;
 
+const Container = styled.section`
+width: 100%;
+max-width: 1280px;
+margin: 0 auto;
+padding: 2% 5%;
 `;
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
     </>
   );
 }

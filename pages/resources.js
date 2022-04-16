@@ -8,7 +8,7 @@ import Title from "../components/Title";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export async function getStaticProps() {
-  // `getStaticProps` is executed on the server side.
+  // "$(getStaticProps)" is executed on the server side.
   const resources = await getResourcesFromAirtable();
   return {
     props: {
@@ -36,10 +36,13 @@ function Resources() {
         <h2>Resources</h2>
         <ul>
           {data.map((resource, i) => {
+            if (!resource.Name) return null;
             return (
               <li key={i}>
                 <h3>
+                {resource.Link ? (
                   <Link href={resource.Link}>{resource.Name}</Link>
+                ) : resource.Name}
                 </h3>
                 <p>{resource.Notes}</p>
               </li>
@@ -52,7 +55,7 @@ function Resources() {
 }
 
 export default function Page({ fallback }) {
-  // SWR hooks inside the `SWRConfig` boundary will use those values.
+  // SWR hooks inside the "$(SWRConfig)" boundary will use those values.
   return (
     <SWRConfig value={{ fallback }}>
       <Resources />
