@@ -9,14 +9,22 @@ const Container = styled.div`
   padding: 2% 5%;
 `;
 
+const Nav = styled.nav`
+display: flex;
+gap: 16px;
+align-items: center;
+justify-content: center;
+width: 100%;
+`;
+
 const MainLayout = ({ children }) => {
   return (
     <Container>
       <header>
-        <nav>
+        <Nav>
           <Link href="/">Has Been Wizards</Link>
           <Link href="/resources">Resources</Link>
-        </nav>
+        </Nav>
       </header>
       <Main>{children}</Main>
       <footer></footer>
