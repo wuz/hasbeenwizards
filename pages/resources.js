@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
+import styled from "styled-components";
 import useSWR, { SWRConfig } from "swr";
 import { getResourcesFromAirtable } from "../airtable";
 import MainLayout from "../components/MainLayout";
@@ -19,8 +21,50 @@ export async function getStaticProps() {
   };
 }
 
+const TextInput = styled.input`
+background: none;
+border: none;
+color: inherit;
+border-bottom: 1px solid #fff;
+height: 40px;
+width: 100%;
+margin-bottom: 24px;
+`;
+
+const Tag = styled.span`
+padding: 2px 4px;
+border: 1px solid #fff;
+margin-right: 4px;
+border-radius: 2px;
+`;
+
+
+const ResourceList = styled.ul`
+list-style: none;
+padding: 0;
+margin: 0;
+li {
+  padding: 4px 12px;
+  margin-bottom: 24px;
+  border-left: 1px solid #fff;
+}
+`;
+
+
 function Resources() {
+  const [search, setSearch] = useState("");
   const { data, error } = useSWR("/api/resources", fetcher);
+  const searchResources = (resource) => {
+    return Object.values(resource).some((value) => {
+      if (Array.isArray(value)) {
+        return value.some((v) => {
+          return v.toLowerCase().includes(search.toLowerCase());
+        })
+      } else {
+        return value.toLowerCase().includes(search.toLowerCase());
+      }
+    })
+  };
   return (
     <MainLayout>
       <Head>
@@ -34,28 +78,30 @@ function Resources() {
         This is a place to find resources to become a better game master and
         worldbuilder.
         <h2>Resources</h2>
-        <ul>
-          {data.map((resource, i) => {
+        {!data && <>Loading...</>}
+        <TextInput placeholder="Filter resources by name, tag, or description..." value={search} onChange={(e) => setSearch(e.target?.value ?? "")} />
+        <ResourceList>
+          {data.filter(searchResources).map((resource, i) => {
             if (!resource.Name) return null;
             return (
               <li key={i}>
                 <h3>
-                {resource.Link ? (
-                  <Link href={resource.Link}>{resource.Name}</Link>
-                ) : resource.Name}
+                  {resource.Link ? (
+                    <Link href={resource.Link}>{resource.Name}</Link>
+                  ) : resource.Name}
                 </h3>
                 <p>{resource.Notes}</p>
+                <p>{resource.Tags.map((tag) => <Tag key="tag">{tag}</Tag>)}</p>
               </li>
             );
           })}
-        </ul>
+        </ResourceList>
       </p>
     </MainLayout>
   );
 }
 
 export default function Page({ fallback }) {
-  // SWR hooks inside the "$(SWRConfig)" boundary will use those values.
   return (
     <SWRConfig value={{ fallback }}>
       <Resources />
