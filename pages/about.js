@@ -6,11 +6,8 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Has Been Wizards</title>
-        <meta
-          name="description"
-          content="Resources and videos for dungeon masters"
-        />
+        <title>About - Has Been Wizards</title>
+        <meta name="description" content="About me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

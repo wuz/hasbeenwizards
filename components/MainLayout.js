@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../assets/logo light.png";
 
 const Main = styled.main``;
 const Container = styled.div`
@@ -10,11 +12,11 @@ const Container = styled.div`
 `;
 
 const Nav = styled.nav`
-display: flex;
-gap: 16px;
-align-items: center;
-justify-content: center;
-width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 
 const MainLayout = ({ children }) => {
@@ -22,7 +24,16 @@ const MainLayout = ({ children }) => {
     <Container>
       <header>
         <Nav>
-          <Link href="/">Has Been Wizards</Link>
+          <Link href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw">
+            Youtube
+          </Link>
+          <Link href="https://twitter.com/hasbeenwizard">Twitter</Link>
+          <Link href="/">
+            <a>
+              <Image height="50" width="50" src={logo} alt="Has Been Wizards" />
+            </a>
+          </Link>
+          <Link href="/about">About</Link>
           <Link href="/resources">Resources</Link>
         </Nav>
       </header>
