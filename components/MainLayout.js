@@ -26,11 +26,12 @@ const MainLayout = ({ children }) => {
         <Nav>
           <Link href="/">
             <a>
-              <Image height="50" width="50" src={logo} alt="Has Been Wizards" />
+              <Image height="50" width="50" src={logo} alt="Mythic Mimic" />
             </a>
           </Link>
           <Link href="/about">About</Link>
           <Link href="/resources">Resources</Link>
+          <Link href="/notion">Notion for DMs</Link>
           <Link href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw">
             Youtube
           </Link>

@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>About - Has Been Wizards</title>
+        <title>About - Mythic Mimic</title>
         <meta name="description" content="About me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Title>Welcome to Has Been Wizards</Title>
+      <Title>Welcome to Mythic Mimic</Title>
 
       <p>
         This is a place to find resources to become a better game master and

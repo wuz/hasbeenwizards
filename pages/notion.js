@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Mythic Mimic</title>
+        <title>Notion for DMs - Mythic Mimic</title>
         <meta
           name="description"
           content="Resources and videos for dungeon masters"
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Title>Welcome to Mythic Mimics</Title>
+      <Title>Do you feel like your session notes aren&apos;t working?</Title>
 
       <p>
         This is a place to find resources to become a better game master and
