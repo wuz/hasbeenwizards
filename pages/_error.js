@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import MainLayout from "../components/MainLayout";
 import Title from "../components/Title";
 import Heading from "../components/Heading";
@@ -18,7 +19,7 @@ export default function Home() {
 
       <Heading>
         Oh no adventurer! You&apos;ve found something that doesn&apos;t exist!
-        Perhaps you should <a href="/">head back home?</a>
+        Perhaps you should <Link href="/">head back home?</Link>
       </Heading>
     </MainLayout>
   );

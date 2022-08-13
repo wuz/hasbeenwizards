@@ -21,7 +21,7 @@ export default function Home() {
         Do you feel like your session notes aren&apos;t working?
       </Heading>
       <p>
-        I've been working on a new resource for all you Dungeon Masters and
+        I&apos;ve been working on a new resource for all you Dungeon Masters and
         worldbuilders out there.
       </p>
     </MainLayout>
