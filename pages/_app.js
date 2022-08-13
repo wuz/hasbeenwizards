@@ -7,11 +7,12 @@ body {
   color: #fff;
   padding: 0;
   margin: 0;
-  font-family: 'Recursive', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
 }
 
 a {
-  color: inherit;
+  color: #FF3EB5;
   text-decoration: none;
 }
 

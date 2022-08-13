@@ -6,6 +6,7 @@ import useSWR, { SWRConfig } from "swr";
 import { getResourcesFromAirtable } from "../airtable";
 import MainLayout from "../components/MainLayout";
 import Title from "../components/Title";
+import Heading from "../components/Heading";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -71,10 +72,14 @@ function Resources() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Title>Awesome DM Resources</Title>
+      <Title>
+        A magical shop, full of items of great power &amp; mysterious trinkets.
+      </Title>
+      <Heading>
+        Here is my collection of my favorite resources for game masters and
+        worldbuilders.
+      </Heading>
       <p>
-        This is a place to find resources to become a better game master and
-        worldbuilder.
         <h2>Resources</h2>
         {!data && <>Loading...</>}
         <TextInput

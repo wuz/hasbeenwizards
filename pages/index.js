@@ -6,19 +6,15 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Mythic Mimic</title>
-        <meta
-          name="description"
-          content="Resources and videos for dungeon masters"
-        />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Oh no - Mythic Mimic</title>
+        <meta name="description" content="Something has gone wrong..." />
       </Head>
 
-      <Title>Welcome to Mythic Mimics</Title>
+      <Title>Enter adventurer... if you dare!</Title>
 
       <p>
-        This is a place to find resources to become a better game master and
-        worldbuilder.
+        Mythic Mimic is the home of Conlin Durbin &mdash; a dungeon master,
+        Twitch streamer, and TTRPG content creator.
       </p>
     </MainLayout>
   );
