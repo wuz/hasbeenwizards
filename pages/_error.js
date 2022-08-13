@@ -17,8 +17,8 @@ export default function Home() {
       <Title>A pitfall trap opens beneath you! Make a dex save!</Title>
 
       <Heading>
-        Oh no adventurer! You've found something that doesn't exist! Perhaps you
-        should <a href="/">head back home?</a>
+        Oh no adventurer! You&apos;ve found something that doesn&apos;t exist!
+        Perhaps you should <a href="/">head back home?</a>
       </Heading>
     </MainLayout>
   );
