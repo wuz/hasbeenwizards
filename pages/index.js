@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Oh no - Mythic Mimic</title>
+        <title>Welcome - Mythic Mimic</title>
         <meta name="description" content="Something has gone wrong..." />
       </Head>
 

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Mythic Mimic</title>
+        <title>A mysterious error - Mythic Mimic</title>
         <meta
           name="description"
           content="Resources and videos for dungeon masters"
