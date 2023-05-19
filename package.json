@@ -7,20 +7,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "airtable": "^0.11.2",
-    "next": "12.1.0",
-    "openai": "^2.0.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "airtable": "^0.12.1",
+    "next": "13.4.3",
+    "openai": "^3.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-helmet": "^6.1.0",
-    "sharp": "^0.30.7",
-    "styled-components": "^5.3.5",
-    "swr": "^1.2.2"
+    "sharp": "^0.32.1",
+    "styled-components": "^6.0.0-rc.1",
+    "swr": "^2.1.5"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
-    "eslint": "8.9.0",
-    "eslint-config-next": "12.1.0",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.3",
     "eslint-plugin-react": "^7.30.1"
   }
 }

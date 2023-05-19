@@ -36,7 +36,6 @@ const Tag = styled.span`
   padding: 2px 4px;
   border: 1px solid #fff;
   margin-right: 4px;
-  border-radius: 2px;
 `;
 
 const ResourceList = styled.ul`
@@ -45,8 +44,8 @@ const ResourceList = styled.ul`
   margin: 0;
   li {
     padding: 4px 12px;
-    margin-bottom: 24px;
-    border-left: 1px solid #fff;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #777;
   }
 `;
 
@@ -73,13 +72,13 @@ function Resources() {
       </Head>
 
       <Title>
-        A magical shop, full of items of great power &amp; mysterious trinkets.
+        A magical shop, full of powerful items &amp; mysterious trinkets.
       </Title>
       <Heading>
         Here is my collection of my favorite resources for game masters and
         worldbuilders.
       </Heading>
-      <p>
+      <div>
         <h2>Resources</h2>
         {!data && <>Loading...</>}
         <TextInput
@@ -109,7 +108,7 @@ function Resources() {
             );
           })}
         </ResourceList>
-      </p>
+      </div>
     </MainLayout>
   );
 }

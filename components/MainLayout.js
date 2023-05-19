@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo from "../assets/logo.png";
 
 const Main = styled.main``;
+
 const Container = styled.div`
   width: 100%;
   max-width: 1000px;
@@ -13,14 +14,15 @@ const Container = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 12px;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
   width: 100%;
-  font-family: "Metal Mania", cursive;
-  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 `;
 
-const A = styled.a`
+const A = styled(Link)`
   color: #fff;
   &:not(:last-child):after {
     content: "•";
@@ -29,36 +31,49 @@ const A = styled.a`
   }
 `;
 
+const Header = styled.header({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: 16,
+});
+
+const JoinLink = styled(Link)({
+  position: 'fixed',
+  top: 0,
+  color: '#fff',
+  background: '#FF3EB5',
+  right: 200,
+  padding: 20,
+});
+
 const MainLayout = ({ children }) => {
   return (
     <Container>
-      <header>
+      <Header>
+        <Link href="/">
+          <Image height={150} width={150} src={logo} alt="Mythic Mimic" />
+        </Link>
         <Nav>
-          <Link href="/" passHref>
-            <a>
-              <Image height="100" width="100" src={logo} alt="Mythic Mimic" />
-            </a>
-          </Link>
-          <Link href="/resources" passHref>
-            <A>Resources</A>
-          </Link>
-          <Link href="/notion" passHref>
-            <A>Notion for DMs</A>
-          </Link>
-          <Link
+          <A href="/resources">
+            Resources
+          </A>
+          <A href="https://wuz.itch.io">
+            itch.io
+          </A>
+          <A
             href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw"
-            passHref
           >
-            <A>Youtube</A>
-          </Link>
-          <Link href="https://twitter.com/hasbeenwizard" passHref>
-            <A>Twitter</A>
-          </Link>
-          <Link href="https://startplaying.games/gm/hasbeenwizard" passHref>
-            <A>Join my table</A>
-          </Link>
+            Youtube
+          </A>
+          <A href="https://twitter.com/hasbeenwizard">
+            Twitter
+          </A>
         </Nav>
-      </header>
+        <JoinLink href="https://startplaying.games/gm/hasbeenwizard">
+          Join my table!
+        </JoinLink>
+      </Header>
       <Main>{children}</Main>
       <footer></footer>
     </Container>

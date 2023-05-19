@@ -1,6 +1,14 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+    font-family: 'Old English Gothic';
+    src: url('/fonts/oldenglishgothicpixelregular-ow2bo-webfont.woff2') format('woff2'),
+         url('/fonts/oldenglishgothicpixelregular-ow2bo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html,
 body {
   background: #222;
