@@ -32,17 +32,17 @@ const A = styled(Link)`
 `;
 
 const Header = styled.header({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
   gap: 16,
 });
 
 const JoinLink = styled(Link)({
-  position: 'fixed',
+  position: "fixed",
   top: 0,
-  color: '#fff',
-  background: '#FF3EB5',
+  color: "#fff",
+  background: "#FF3EB5",
   right: 200,
   padding: 20,
 });
@@ -55,22 +55,14 @@ const MainLayout = ({ children }) => {
           <Image height={150} width={150} src={logo} alt="Mythic Mimic" />
         </Link>
         <Nav>
-          <A href="/resources">
-            Resources
-          </A>
-          <A href="https://wuz.itch.io">
-            itch.io
-          </A>
-          <A
-            href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw"
-          >
+          <A href="/resources">Resources</A>
+          <A href="https://wuz.itch.io">itch.io</A>
+          <A href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw">
             Youtube
           </A>
-          <A href="https://twitter.com/hasbeenwizard">
-            Twitter
-          </A>
+          <A href="https://twitter.com/hasbeenwizard">Twitter</A>
         </Nav>
-        <JoinLink href="https://startplaying.games/gm/hasbeenwizard">
+        <JoinLink href="https://startplaying.games/gm/wuz">
           Join my table!
         </JoinLink>
       </Header>
