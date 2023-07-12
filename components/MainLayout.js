@@ -52,7 +52,7 @@ const MainLayout = ({ children }) => {
     <Container>
       <Header>
         <Link href="/">
-          <Image height={150} width={150} src={logo} alt="Mythic Mimic" />
+          <Image height={150} width={150} src={logo} alt="HasBeenWizards" />
         </Link>
         <Nav>
           <A href="/resources">Resources</A>

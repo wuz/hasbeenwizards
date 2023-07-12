@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Notion for DMs - Mythic Mimic</title>
+        <title>Notion for DMs - HasBeenWizards</title>
         <meta
           name="description"
           content="Resources and videos for dungeon masters"
