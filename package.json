@@ -17,6 +17,9 @@
     "styled-components": "^6.0.0-rc.1",
     "swr": "^2.1.5"
   },
+  "engine": {
+    "node": ">=16.8.0"
+  },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.40.0",
