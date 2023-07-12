@@ -57,10 +57,8 @@ const MainLayout = ({ children }) => {
         <Nav>
           <A href="/resources">Resources</A>
           <A href="https://wuz.itch.io">itch.io</A>
-          <A href="https://www.youtube.com/channel/UCE-CG2hIWTJrgKD99hSVaMw">
-            Youtube
-          </A>
-          <A href="https://twitter.com/hasbeenwizard">Twitter</A>
+          <A href="https://www.youtube.com/@hasbeenwizards">Youtube</A>
+          <A href="https://twitter.com/hasbeenwizards">Twitter</A>
         </Nav>
         <JoinLink href="https://startplaying.games/gm/wuz">
           Join my table!
