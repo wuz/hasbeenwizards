@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Analytics } from '@vercel/analytics/react';
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -43,6 +44,7 @@ function MyApp({ Component, pageProps }) {
       <Container>
         <Component {...pageProps} />
       </Container>
+      <Analytics />
     </>
   );
 }
