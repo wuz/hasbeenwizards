@@ -36,6 +36,7 @@ const Header = styled.header({
   flexDirection: "column",
   alignItems: "center",
   gap: 16,
+  marginTop: 40,
 });
 
 const JoinLink = styled(Link)({
@@ -43,7 +44,7 @@ const JoinLink = styled(Link)({
   top: 0,
   color: "#fff",
   background: "#FF3EB5",
-  right: 200,
+  left: 40,
   padding: 20,
 });
 
@@ -55,6 +56,7 @@ const MainLayout = ({ children }) => {
           <Image height={150} width={150} src={logo} alt="HasBeenWizards" />
         </Link>
         <Nav>
+          <A href="/blog">Blog</A>
           <A href="/resources">Resources</A>
           <A href="https://wuz.itch.io">itch.io</A>
           <A href="https://www.youtube.com/@hasbeenwizards">Youtube</A>
