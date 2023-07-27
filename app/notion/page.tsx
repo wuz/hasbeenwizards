@@ -1,20 +1,20 @@
-import Head from "next/head";
-import MainLayout from "../../components/MainLayout";
-import Title from "../../components/Title";
-import Heading from "../../components/Heading";
+'use client';
+import MainLayout from "@/components/MainLayout";
+import Title from "@/components/Title";
+import Heading from "@/components/Heading";
 
-export default function Home() {
-  return (
-    <MainLayout>
-      <Head>
+{/* <Head>
         <title>Notion for DMs - HasBeenWizards</title>
         <meta
           name="description"
           content="Resources and videos for dungeon masters"
         />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
+export default function Home() {
+  return (
+    <MainLayout>
       <Title>You find, here, an tome of ancient secrets...</Title>
 
       <Heading>
