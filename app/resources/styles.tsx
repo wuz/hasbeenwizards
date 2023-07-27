@@ -1,26 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-import { useState } from "react";
+'use client';
 import styled from "styled-components";
-import useSWR, { SWRConfig } from "swr";
-import { getResourcesFromAirtable } from "../airtable";
-import MainLayout from "../components/MainLayout";
-import Title from "../components/Title";
-import Heading from "../components/Heading";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-export async function getStaticProps() {
-  // "$(getStaticProps)" is executed on the server side.
-  const resources = await getResourcesFromAirtable();
-  return {
-    props: {
-      fallback: {
-        "/api/resources": resources,
-      },
-    },
-  };
-}
+import Link from "next/link";
+import MainLayout from "../../components/MainLayout";
+import Title from "../../components/Title";
+import Heading from "../../components/Heading";
+import { useState } from "react";
 
 const TextInput = styled.input`
   background: none;
@@ -49,10 +34,20 @@ const ResourceList = styled.ul`
   }
 `;
 
-function Resources() {
-  const [search, setSearch] = useState("");
-  const { data, error } = useSWR("/api/resources", fetcher);
-  const searchResources = (resource) => {
+export type Resource = {
+    Tags: string[];
+    Link: string;
+    Name: string;
+    Notes: string;
+}
+
+type ResourcesProps = {
+  resources: Resource[];
+}
+
+const Resources = ({resources}: ResourcesProps) => {
+    const [search, setSearch] = useState("");
+    const searchResources = (resource: Resource) => {
     return Object.values(resource).some((value) => {
       if (Array.isArray(value)) {
         return value.some((v) => {
@@ -65,15 +60,6 @@ function Resources() {
   };
   return (
     <MainLayout>
-      <Head>
-        <title>HasBeenWizards</title>
-        <meta
-          name="description"
-          content="HasBeenWizards is the home of Conlin Durbin &mdash; a professional dungeon master, Twitch streamer, and TTRPG content creator."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Title>
         A magical shop, full of powerful items &amp; mysterious trinkets.
       </Title>
@@ -83,14 +69,14 @@ function Resources() {
       </Heading>
       <div>
         <h2>Resources</h2>
-        {!data && <>Loading...</>}
+        {!resources && <>Loading...</>}
         <TextInput
           placeholder="Filter resources by name, tag, or description..."
           value={search}
           onChange={(e) => setSearch(e.target?.value ?? "")}
         />
         <ResourceList>
-          {data.filter(searchResources).map((resource, i) => {
+          {resources.filter(searchResources).map((resource, i) => {
             if (!resource.Name) return null;
             return (
               <li key={i}>
@@ -116,10 +102,4 @@ function Resources() {
   );
 }
 
-export default function Page({ fallback }) {
-  return (
-    <SWRConfig value={{ fallback }}>
-      <Resources />
-    </SWRConfig>
-  );
-}
+export default Resources;

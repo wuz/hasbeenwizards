@@ -1,3 +1,5 @@
+'use client';
+
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
@@ -56,7 +58,7 @@ const MainLayout = ({ children }) => {
           <Image height={150} width={150} src={logo} alt="HasBeenWizards" />
         </Link>
         <Nav>
-          <A href="/blog">Blog</A>
+          <A href="/posts">Blog</A>
           <A href="/resources">Resources</A>
           <A href="https://wuz.itch.io">itch.io</A>
           <A href="https://www.youtube.com/@hasbeenwizards">Youtube</A>

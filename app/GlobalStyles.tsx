@@ -1,7 +1,8 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { Analytics } from '@vercel/analytics/react';
+'use client';
 
-const GlobalStyle = createGlobalStyle`
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
 @font-face {
     font-family: 'Old English Gothic';
     src: url('/fonts/oldenglishgothicpixelregular-ow2bo-webfont.woff2') format('woff2'),
@@ -29,24 +30,3 @@ a {
   box-sizing: border-box;
 }
 `;
-
-const Container = styled.section`
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2% 5%;
-`;
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <Container>
-        <Component {...pageProps} />
-      </Container>
-      <Analytics />
-    </>
-  );
-}
-
-export default MyApp;

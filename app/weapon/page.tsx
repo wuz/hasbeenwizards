@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
-import MainLayout from "../components/MainLayout";
-import Title from "../components/Title";
+import MainLayout from "../../components/MainLayout";
+import Title from "../../components/Title";
 import styled from 'styled-components';
 
 const Text = styled.textarea`

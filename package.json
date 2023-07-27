@@ -9,22 +9,27 @@
   "dependencies": {
     "@vercel/analytics": "^1.0.1",
     "airtable": "^0.12.1",
-    "next": "13.4.3",
+    "contentlayer": "^0.3.4",
+    "next": "^13.4.12",
+    "next-contentlayer": "^0.3.4",
     "openai": "^3.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "sharp": "^0.32.1",
     "styled-components": "^6.0.0-rc.1",
     "swr": "^2.1.5"
   },
   "engine": {
-    "node": ">=16.8.0"
+    "node": ">=18.4.0"
   },
   "devDependencies": {
+    "@types/react": "18.2.17",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.3",
-    "eslint-plugin-react": "^7.30.1"
+    "eslint-config-next": "^13.4.12",
+    "eslint-plugin-react": "^7.30.1",
+    "typescript": "5.1.6",
+    "vercel": "^31.1.1"
   }
 }
