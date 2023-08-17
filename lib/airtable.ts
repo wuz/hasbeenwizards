@@ -7,20 +7,19 @@ type Resource = {
   Link: string;
   Name: string;
   Notes: string;
-}
+};
 
 export const getResourcesFromAirtable = async () => {
-    const resources: Resource[] = [];
-    const pages = await base("D&D Resources").select({
-      view: "Grid view",
+  const resources: Resource[] = [];
+  const pages = base("D&D Resources").select({
+    view: "Grid view",
+  });
+  await pages.eachPage((records, fetchNextPage) => {
+    records.forEach((record) => {
+      resources.push(record.fields as Resource);
     });
-    pages.eachPage(
-      (records, fetchNextPage) => {
-        records.forEach((record) => {
-          resources.push(record.fields as Resource);
-        });
 
-        fetchNextPage();
-      });
-   return resources;
-}
+    fetchNextPage();
+  });
+  return resources;
+};

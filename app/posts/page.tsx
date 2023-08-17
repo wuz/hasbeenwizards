@@ -1,9 +1,10 @@
-import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
+import { allPosts } from "@/.contentlayer/generated";
+import MainLayout from "@/components/MainLayout";
+import Link from "next/link";
 
 export default function Blog() {
   return (
-    <div>
+    <MainLayout>
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
@@ -12,6 +13,6 @@ export default function Blog() {
           {post.description && <p>{post.description}</p>}
         </article>
       ))}
-    </div>
-  )
+    </MainLayout>
+  );
 }

@@ -1,5 +1,4 @@
-'use client';
-import styled from "styled-components";
+"use client";
 
 import Link from "next/link";
 import MainLayout from "../../components/MainLayout";
@@ -7,47 +6,22 @@ import Title from "../../components/Title";
 import Heading from "../../components/Heading";
 import { useState } from "react";
 
-const TextInput = styled.input`
-  background: none;
-  border: none;
-  color: inherit;
-  border-bottom: 1px solid #fff;
-  height: 40px;
-  width: 100%;
-  margin-bottom: 24px;
-`;
-
-const Tag = styled.span`
-  padding: 2px 4px;
-  border: 1px solid #fff;
-  margin-right: 4px;
-`;
-
-const ResourceList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  li {
-    padding: 4px 12px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #777;
-  }
-`;
+import { textInput, resourcesList, styledTag } from "./resources.css";
 
 export type Resource = {
-    Tags: string[];
-    Link: string;
-    Name: string;
-    Notes: string;
-}
+  Tags: string[];
+  Link: string;
+  Name: string;
+  Notes: string;
+};
 
 type ResourcesProps = {
   resources: Resource[];
-}
+};
 
-const Resources = ({resources}: ResourcesProps) => {
-    const [search, setSearch] = useState("");
-    const searchResources = (resource: Resource) => {
+const Resources = ({ resources }: ResourcesProps) => {
+  const [search, setSearch] = useState("");
+  const searchResources = (resource: Resource) => {
     return Object.values(resource).some((value) => {
       if (Array.isArray(value)) {
         return value.some((v) => {
@@ -70,12 +44,13 @@ const Resources = ({resources}: ResourcesProps) => {
       <div>
         <h2>Resources</h2>
         {!resources && <>Loading...</>}
-        <TextInput
+        <input
+          className={textInput}
           placeholder="Filter resources by name, tag, or description..."
           value={search}
           onChange={(e) => setSearch(e.target?.value ?? "")}
         />
-        <ResourceList>
+        <ul className={resourcesList}>
           {resources.filter(searchResources).map((resource, i) => {
             if (!resource.Name) return null;
             return (
@@ -90,16 +65,18 @@ const Resources = ({resources}: ResourcesProps) => {
                 <p>{resource.Notes}</p>
                 <p>
                   {resource.Tags.map((tag) => (
-                    <Tag key="tag">{tag}</Tag>
+                    <span className={styledTag} key="tag">
+                      {tag}
+                    </span>
                   ))}
                 </p>
               </li>
             );
           })}
-        </ResourceList>
+        </ul>
       </div>
     </MainLayout>
   );
-}
+};
 
 export default Resources;

@@ -1,5 +1,5 @@
-import MainLayout from "../components/MainLayout";
-import Title from "../components/Title";
+import MainLayout from "@/components/MainLayout";
+import Title from "@/components/Title";
 
 export default function Home() {
   return (
