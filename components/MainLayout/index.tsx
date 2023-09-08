@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
       <div className={header}>
         <header className={innerHeader}>
           <Link href="/">
-            <Image height={100} width={100} src={logo} alt="HasBeenWizards" />
+            <Image height={181} width={237} src={logo} alt="HasBeenWizards" />
           </Link>
           <nav className={nav}>
             <Link className={cx(link, pathname === "/" && activeLink)} href="/">

@@ -2,10 +2,8 @@ import { vars } from "@/lib/theme.css";
 import { style } from "@vanilla-extract/css";
 
 export const container = style({
-  width: "100%",
-  maxWidth: 1000,
+  width: "100vw",
   margin: "0 auto",
-  padding: "2% 5%",
 });
 
 export const nav = style({
@@ -43,8 +41,8 @@ export const header = style({
 export const innerHeader = style({
   maxWidth: 1200,
   margin: "0 auto",
-  paddingTop: 32,
-  paddingBottom: 32,
+  paddingTop: 16,
+  paddingBottom: 16,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",

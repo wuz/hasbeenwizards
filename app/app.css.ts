@@ -20,8 +20,8 @@ globalStyle("*, *:after, *:before", {
 });
 
 globalStyle("html, body", {
-  background: "#222",
-  color: "#fff",
+  background: vars.color.background,
+  color: vars.color.text,
   padding: 0,
   margin: 0,
   fontFamily: vars.font.body,

@@ -2,8 +2,9 @@ import { createTheme } from "@vanilla-extract/css";
 
 export const [themeClass, vars] = createTheme({
   color: {
-    brand: "#FF3EB5",
-    background: "#222",
+    brand: "#8e30f8",
+    background: "#111",
+    text: "#fff",
   },
   font: {
     body: `"Inter", sans-serif`,
