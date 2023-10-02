@@ -19,6 +19,33 @@ export default function Home() {
       <Section inverted>
         <Flex align="center">
           <div>
+            <ItchEmbed
+              src="https://itch.io/embed/2292955"
+              link="https://wuz.itch.io/morktober-2023"
+              title="Morktober 2023 by Wuz"
+            />
+          </div>
+          <div>
+            <Title>#Morktober 2023</Title>
+            <Body>
+              HBW is participating in Morktober this October! Check out the itch
+              page for the finished pages and check back at the end for a
+              collection of everything we&apos;ve built!
+            </Body>
+          </div>
+        </Flex>
+      </Section>
+      <Section>
+        <Title>dmpad</Title>
+        <Body>
+          dmpad is a note taking tool for game masters of all kinds. Prepare
+          your sessions, design your dungeons, and keep track of your game.
+        </Body>
+        <a href="https://dmpad.app">Check it out</a>
+      </Section>
+      <Section inverted>
+        <Flex align="center">
+          <div>
             <Title>Spellbook</Title>
             <Body>
               You are a{" "}
