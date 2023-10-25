@@ -6,9 +6,9 @@ import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 //
 // }
 
-export const oldEnglishGothic = "Old English Gothic";
+export const oldEnglishGothicPixel = "Old English Gothic Pixel";
 
-globalFontFace(oldEnglishGothic, {
+globalFontFace(oldEnglishGothicPixel, {
   src: `url('/fonts/oldenglishgothicpixelregular-ow2bo-webfont.woff2') format('woff2'),
           url('/fonts/oldenglishgothicpixelregular-ow2bo-webfont.woff') format('woff')`,
   fontWeight: "normal",
@@ -31,4 +31,10 @@ globalStyle("html, body", {
 globalStyle("a", {
   color: "#FF3EB5",
   textDecoration: "none",
+});
+
+globalStyle("hr", {
+  border: "none",
+  borderBottom: `1px solid ${vars.color.text}`,
+  width: "100%",
 });

@@ -657,6 +657,11 @@
   resolved "https://registry.yarnpkg.com/@fal-works/esbuild-plugin-global-externals/-/esbuild-plugin-global-externals-2.1.2.tgz#c05ed35ad82df8e6ac616c68b92c2282bd083ba4"
   integrity sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==
 
+"@fontsource/im-fell-english@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/im-fell-english/-/im-fell-english-5.0.8.tgz#40ea30428479424d1dd25f00c7abb4573ce97b35"
+  integrity sha512-8zmiFto2/ks6vFxBuv/X3BwzTR/OEn8nOGTE1QNJFFSleL1g43byA4Cj74n0M/9hcuEYlWX9/QYosDoTo8o/ag==
+
 "@grpc/grpc-js@^1.7.1":
   version "1.8.20"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.20.tgz#03dc316045664299bbf30f0458f5877ebeec5815"

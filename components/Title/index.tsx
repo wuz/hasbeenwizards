@@ -1,7 +1,15 @@
 "use client";
 
+import { ReactNode } from "react";
 import { title } from "./Title.css";
 
-const Title = ({ children }) => <h1 className={title}>{children}</h1>;
+type TitleProps = {
+  children: ReactNode;
+  type?: keyof typeof title;
+};
+
+const Title = ({ children, type = "section" }: TitleProps) => (
+  <h1 className={title[type]}>{children}</h1>
+);
 
 export default Title;

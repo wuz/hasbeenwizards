@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <MainLayout>
       <Section>
-        <Title>Enter adventurer... if you dare!</Title>
+        <Title type="page">Welcome wuzzards, wanderers, and weirds</Title>
         <Body>
-          HasBeenWizards is an independent publishing company by Conlin Durbin,
-          focused on helping GMs and players tell incredible stories and build
-          immersive worlds.
+          TTRPGs, tools, resources, and writings for players, game masters,
+          designers, and more.
         </Body>
       </Section>
-      <Section inverted>
+      <Title>Projects</Title>
+      <Section>
         <Flex align="center">
           <div>
             <ItchEmbed
@@ -43,7 +43,7 @@ export default function Home() {
         </Body>
         <a href="https://dmpad.app">Check it out</a>
       </Section>
-      <Section inverted>
+      <Section>
         <Flex align="center">
           <div>
             <Title>Spellbook</Title>

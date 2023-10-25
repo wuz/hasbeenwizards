@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/im-fell-english": "^5.0.8",
     "@vanilla-extract/css": "^1.12.0",
     "@vercel/analytics": "^1.0.1",
     "airtable": "^0.12.1",

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./app.css";
 import { Analytics } from "@vercel/analytics/react";
 import { themeClass } from "@/lib/theme.css";
+import "@fontsource/im-fell-english";
 
 export const metadata: Metadata = {
   title: "Welcome - HasBeenWizards",

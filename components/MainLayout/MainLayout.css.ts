@@ -4,12 +4,15 @@ import { style } from "@vanilla-extract/css";
 export const container = style({
   width: "100vw",
   margin: "0 auto",
+  display: "grid",
+  gridTemplateColumns: "200px 1fr",
 });
 
 export const nav = style({
   display: "flex",
-  alignItems: "center",
-  justifyContent: "end",
+  alignItems: "flex-start",
+  justifyContent: "flex-end",
+  flexDirection: "column",
   gap: 16,
   width: "100%",
   fontFamily: vars.font.body,
@@ -34,8 +37,9 @@ export const header = style({
   position: "sticky",
   top: 0,
   background: vars.color.background,
-  width: "100%",
+  height: "100vh",
   boxShadow: `1px 5px 10px rgba(0,0,0,0.16)`,
+  padding: 24,
 });
 
 export const innerHeader = style({
@@ -46,10 +50,9 @@ export const innerHeader = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
+  flexDirection: "column",
 });
 
-export const joinLink = style({
-  color: "#fff",
-  background: vars.color.brand,
-  padding: 12,
+export const main = style({
+  padding: "2% 5%",
 });
