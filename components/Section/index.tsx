@@ -6,9 +6,7 @@ type SectionProps = {
 };
 
 const Section = ({ children }: SectionProps) => (
-  <section>
-    <div className={inner}>{children}</div>
-  </section>
+  <section className={inner}>{children}</section>
 );
 
 export default Section;

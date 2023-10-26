@@ -3,6 +3,11 @@ import { style, styleVariants } from "@vanilla-extract/css";
 export const flex = style({
   display: "flex",
   gap: 32,
+  "@media": {
+    "screen and (max-width: 768px)": {
+      display: "block",
+    },
+  },
 });
 
 export const direction = styleVariants({

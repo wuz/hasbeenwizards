@@ -1,5 +1,7 @@
 "use client";
 
+import { embed } from "./ItchEmbed.css";
+
 type ItchEmbedProps = {
   src: string;
   link: string;
@@ -8,7 +10,13 @@ type ItchEmbedProps = {
 
 const ItchEmbed = ({ src, link, title }: ItchEmbedProps) => {
   return (
-    <iframe style={{ border: "none" }} src={src} width="552" height="167" />
+    <iframe
+      className={embed}
+      style={{ border: "none" }}
+      src={src}
+      width="552"
+      height="167"
+    />
   );
 };
 
