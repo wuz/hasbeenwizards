@@ -18,13 +18,11 @@ export default function Home() {
       <Title>Projects</Title>
       <Section>
         <Flex align="center">
-          <div>
-            <ItchEmbed
-              src="https://itch.io/embed/2292955"
-              link="https://wuz.itch.io/morktober-2023"
-              title="Morktober 2023 by Wuz"
-            />
-          </div>
+          <ItchEmbed
+            src="https://itch.io/embed/2292955"
+            link="https://wuz.itch.io/morktober-2023"
+            title="Morktober 2023 by Wuz"
+          />
           <div>
             <Title>#Morktober 2023</Title>
             <Body>
@@ -34,17 +32,31 @@ export default function Home() {
             </Body>
           </div>
         </Flex>
-      </Section>
-      <Section>
-        <Title>dmpad</Title>
-        <Body>
-          dmpad is a note taking tool for game masters of all kinds. Prepare
-          your sessions, design your dungeons, and keep track of your game.
-        </Body>
-        <a href="https://dmpad.app">Check it out</a>
-      </Section>
-      <Section>
+        <hr />
         <Flex align="center">
+          <div>
+            <Title>dmpad</Title>
+            <Body>
+              dmpad is a note taking tool for game masters of all kinds. Prepare
+              your sessions, design your dungeons, and keep track of your game.
+            </Body>
+          </div>
+          <div>
+            <ItchEmbed
+              src="https://itch.io/embed/2294821"
+              link="https://wuz.itch.io/dmpad"
+              title="dmpad by Wuz"
+            />
+            <a href="https://dmpad.app">or check it out directly</a>
+          </div>
+        </Flex>
+        <hr />
+        <Flex align="center">
+          <ItchEmbed
+            src="https://itch.io/embed/2253200"
+            link="https://wuz.itch.io/spellbook"
+            title="Spellbook by Wuz"
+          />
           <div>
             <Title>Spellbook</Title>
             <Body>
@@ -62,13 +74,6 @@ export default function Home() {
               currently reading as a &ldquo;roll table&rdquo;.
             </Body>
             <Body>Be wary of Misspells!</Body>
-          </div>
-          <div>
-            <ItchEmbed
-              src="https://itch.io/embed/2253200?linkback=true&amp;bg_color=ffffff&amp;fg_color=222222&amp;link_color=000000&amp;border_color=cccccc"
-              link="https://wuz.itch.io/spellbook"
-              title="Spellbook by Wuz"
-            />
           </div>
         </Flex>
       </Section>
